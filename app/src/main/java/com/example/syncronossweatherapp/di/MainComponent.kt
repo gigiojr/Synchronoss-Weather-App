@@ -4,7 +4,7 @@ import com.example.syncronossweatherapp.ui.main.MainActivity
 import com.example.syncronossweatherapp.ui.main.MainFragment
 import dagger.Subcomponent
 
-@Subcomponent(modules = [MainModule::class, DataSourceModule::class, NetworkModule::class])
+@Subcomponent(modules = [MainModule::class, DataSourceModule::class, NetworkModule::class, WorkerModule::class])
 interface MainComponent {
 
     @Subcomponent.Factory

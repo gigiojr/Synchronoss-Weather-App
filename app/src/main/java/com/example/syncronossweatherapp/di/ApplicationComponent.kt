@@ -5,7 +5,7 @@ import dagger.BindsInstance
 import dagger.Component
 import dagger.Module
 
-@Component(modules = [DataSourceModule::class, NetworkModule::class])
+@Component
 interface ApplicationComponent {
 
     @Component.Factory
