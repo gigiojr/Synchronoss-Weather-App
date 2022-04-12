@@ -1,9 +1,8 @@
 package com.example.syncronossweatherapp.di
 
-import com.example.syncronossweatherapp.repository.ILocationRepository
-import com.example.syncronossweatherapp.repository.IWeatherRepository
-import com.example.syncronossweatherapp.repository.LocationRepository
-import com.example.syncronossweatherapp.repository.WeatherRepository
+import com.example.syncronossweatherapp.dataSource.IUserPreference
+import com.example.syncronossweatherapp.dataSource.UserPreference
+import com.example.syncronossweatherapp.repository.*
 import dagger.Binds
 import dagger.Module
 
@@ -11,8 +10,14 @@ import dagger.Module
 abstract class DataSourceModule {
 
     @Binds
-    abstract fun provideWeatherRepository(repository: WeatherRepository): IWeatherRepository
+    abstract fun provideUserPreference(userPreference: UserPreference): IUserPreference
+
+    @Binds
+    abstract fun provideDataStorageRepository(repository: DataStorageRepositoryRepository): IDataStorageRepository
 
     @Binds
     abstract fun provideLocationRepository(repository: LocationRepository): ILocationRepository
+
+    @Binds
+    abstract fun provideWeatherRepository(repository: WeatherRepository): IWeatherRepository
 }
