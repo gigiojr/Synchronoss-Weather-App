@@ -19,5 +19,5 @@ interface WorkerModule {
     @Binds
     @IntoMap
     @WorkerKey(WeatherWork::class)
-    fun bindHelloWorldWorker(factory: WeatherWork.Factory): IWeatherWork
+    fun bindWeatherWorker(worker: WeatherWork.Factory): IWeatherWork<out ListenableWorker>
 }

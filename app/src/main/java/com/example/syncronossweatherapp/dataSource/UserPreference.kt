@@ -5,7 +5,6 @@ import com.example.syncronossweatherapp.model.WeatherResponse
 import com.google.gson.Gson
 import javax.inject.Inject
 
-
 class UserPreference @Inject constructor(private val applicationContext: Context) : IUserPreference {
 
     override fun getPreference(tag: String?): String? {
@@ -20,7 +19,7 @@ class UserPreference @Inject constructor(private val applicationContext: Context
         editor.apply()
     }
 
-    override fun getPreference(tag: String): WeatherResponse? {
+    override fun getWeather(tag: String): WeatherResponse? {
         val preferences = applicationContext.getSharedPreferences(IUserPreference.PREFS_NAME, 0)
         val json: String? = preferences.getString(tag, "")
         return Gson().fromJson(json, WeatherResponse::class.java)

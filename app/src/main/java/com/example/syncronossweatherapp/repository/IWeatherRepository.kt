@@ -1,5 +1,7 @@
 package com.example.syncronossweatherapp.repository
 
+import com.example.syncronossweatherapp.model.WeatherResponse
+
 interface IWeatherRepository {
-    fun getWeatherByLocation(lat: String, lon: String)
+    suspend fun getWeatherByLocation(lat: String, lon: String): WeatherResponse?
 }

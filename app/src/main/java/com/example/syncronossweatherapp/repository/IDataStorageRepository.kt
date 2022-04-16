@@ -3,6 +3,6 @@ package com.example.syncronossweatherapp.repository
 import com.example.syncronossweatherapp.model.WeatherResponse
 
 interface IDataStorageRepository {
-    fun getLastWeather(): WeatherResponse?
-    fun updateWeather(lastWeather: WeatherResponse)
+    suspend fun getLastWeather(): WeatherResponse?
+    suspend fun updateWeather(lastWeather: WeatherResponse)
 }
