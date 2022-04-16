@@ -18,7 +18,6 @@ class WeatherRepository @Inject constructor(
         return Single.create(SingleOnSubscribe<WeatherResponse> { emitter ->
             weatherMapService.getWeather(lat, lon).enqueue(object : Callback<WeatherResponse>{
                 override fun onResponse(call: Call<WeatherResponse>?, response: Response<WeatherResponse>?) {
-                    emitter.onError(Throwable("Weather not found"))
                     response?.body()?.let {
                         emitter.onSuccess(it)
                     } ?: run {

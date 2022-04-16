@@ -4,7 +4,7 @@ import android.app.Application
 import androidx.work.Configuration
 import com.example.syncronossweatherapp.di.ApplicationComponent
 import com.example.syncronossweatherapp.di.DaggerApplicationComponent
-import com.example.syncronossweatherapp.worker.WorkerInjectorFactory
+import com.example.syncronossweatherapp.di.WorkerInjectorFactory
 import javax.inject.Inject
 
 class WeatherApplication : Application(), Configuration.Provider {

@@ -1,9 +1,10 @@
-package com.example.syncronossweatherapp.worker
+package com.example.syncronossweatherapp.di
 
 import android.content.Context
 import androidx.work.ListenableWorker
 import androidx.work.WorkerFactory
 import androidx.work.WorkerParameters
+import com.example.syncronossweatherapp.worker.IWeatherWork
 import javax.inject.Inject
 import javax.inject.Provider
 
